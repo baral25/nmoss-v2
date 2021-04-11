@@ -1,0 +1,4 @@
+Default Server:  ns.wlink.com.np
+Address:  202.79.32.4
+
+> 

@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color:black;
+  font-size: small;
+  
+}
+.i{
+  background-color: #121212;
+}
+.Login{
+  background-color: #008CBA; /* blue*/
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 20px;
+  margin-left: 950px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 8px;
+   
+}
+.Login:hover {
+  background-color: #f535aa;
+  color: white;
+}
+.main{
+  background-color: #008CBA; /* blue*/
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 20px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  
+  font-size: 1rem;
+  border-radius: 8px;
+   
+}
+.main:hover {
+  background-color: #f535aa;
+  color: white;
+}
+.custom_browse{
+  display: inline-block;
+  background-color: #008CBA;
+  color: #008CBA;
+  cursor: pointer;
+  position: relative;
+  bottom:1180px;
+  left: 740px;
+}
+.devices_heading{
+  color: white;
+  width: 1px;
+}
+
+/* .circle {
+  height: 130px;
+  width: 130px;
+  background: linear-gradient(0.33turn, #3f87a6, #ebf8e1, #f69d3c, #561423);
+  border-radius: 50%;
+  position: relative;
+  top: 20px;
+  margin-bottom: 30px;
+} */
+.dashboard{
+  background-color: #121212;
+  height: 800px;
+  width: 750px;
+  position: relative;
+  padding-left: 10px;
+  left: 360px;
+  top: 150px;
+  border-radius: 2%;
+ box-shadow: 0 5px 5px 0 rgba(0, 140, 186, 1), 0 6px 20px 0 rgba(0, 140, 186, 1);
+}
+.header{
+  height: 100%;
+}
+.router_dash{
+  position: relative;
+  top: 100px;
+  color: white;
+}
+.dash{
+  background-color:#121212;
+  font-size: large;
+}
+
+#dash_name{
+  background-color: white;
+  width: 60px;
+}
+#ipv4_d{
+  position: relative;
+  left: 420px;
+  width: 315px;
+  padding-left: 0px;
+  font-size: large;
+  margin-top: 25px;
+  
+}
+#ssid_d{
+  color: white;
+  background-color: #121212;
+  position: relative;
+  top: 60px;
+  left: 15px;
+  font-size:large;
+  width: 340px;
+}
+#signal_d{
+  position: relative;
+  left: 390px;
+  background-color: #121212;
+  width: 300px;
+  font-size: larger;
+  top: 30px;
+  padding-left: 44;
+}
+#isp_d{
+  width: 300px;
+  color: white;
+  position: relative;
+  top: 123px;
+  left: 390px;
+}
+#number_d{
+  
+  color: white;
+  position: relative;
+  bottom: 160px;
+  left: 370px;
+  height: 1;
+  background-color: #121212;
+  width: 300;
+  margin-top: 8px;
+  
+}
+#len_device{
+  color: white;
+  position: relative;
+  top: 150px;
+}
+#last_d{
+  position: relative;
+left: 410px;
+top: 9px;
+}
+.container_devices{
+  width: 300px;
+  padding: 4px;
+  
+
+}
+.device{
+  background-color: #121212;
+  position: relative;
+  top: 20px;
+  color: white;
+  font-style: bold;
+  font-size: 20px;
+  height: 60px;
+}
+.router_dash{
+  background-color: #121212;
+  position: relative;
+  color: white;
+  font-style: bold;
+  font-size: 20px;
+  padding-bottom: 40px;
+}
+.user_dash{
+  background-color: #121212;
+position: relative;
+top: 120px;
+color: white;
+font-style: bold;
+font-size: 20px;
+}
+.nearby_dash{
+  background-color: #121212;
+  color: white;
+  font-style: bold;
+  font-size: 20px;
+  position: relative;
+  bottom: 170px;
+  left: 370px;
+  width: 750px;
+}
+.netstat_dash{
+  background-color: #121212;
+  position: relative;
+  color: white;
+  font-style: bold;
+  font-size: 20px;
+  bottom: 70px;
+  left: 370px;
+  width: 500px;
+}
+
+ .h2_summary{
+  position: relative;
+  bottom: 40px;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+} 
+.h2_summary:hover{
+  color: #008CBA;
+}
+.h31{
+  cursor:pointer;
+}
+.h31:hover{
+  color: #008CBA;
+}
+#isp_dns{
+  cursor: pointer;
+  
+}
+#isp_dns:hover{
+  color: #008CBA;
+}
+#oth_wifi{
+  cursor: pointer;
+  
+}
+#oth_wifi:hover{
+  color: #008CBA;
+}
+.text{
+  padding:10px;
+  color: brown;
+}
+#tcp{
+  color: brown;
+}
+#output{
+  padding:10px;
+  size: 40px;
+  color: red;
+  margin-right: 73%; 
+}
+#tcp_count{
+  position: relative;
+  bottom: 30px;
+  width: 350px;
+  left: 400px;
+  color: white;
+}
+#text{
+  background-color: black;
+  padding: 10px;
+}
+#wifi{
+  color: green;
+  padding: 10px;
+}
+#ipAdd{
+  color: orange;
+  padding: 10px;
+}
+#ipv4_d{
+  color: white;
+}
+
+.dev_wrap{
+  position:relative;
+  bottom: 1100px;
+  padding: 4px;
+  height: 380px;
+  width: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align:justify; 
+}
+
+#vendor{
+  background-color:  #2C2C2C;
+  color: white;
+  margin-right: 80%;
+  margin-left: 0.5%;
+  
+}
+#ip{
+  color: white;
+  background-color:  #2C2C2C;
+  margin-right: 80%;
+  margin-left: 0.5%;
+}
+#mac{
+  color: white;
+  background-color:  #2C2C2C;
+  border-bottom: dashed 2px white;
+  padding-bottom: 10px;
+  margin-right: 80%;
+  margin-left: 0.5%;
+}
+.own{
+  
+  color: white;
+  margin-right: 80%;
+  background-color:  #2C2C2C;
+  margin-left: 0.5%;
+  position: relative;
+  bottom: 700px;
+}
+
+.h31{
+  padding-top: 20px;
+  padding-bottom: 10px;
+ 
+}
+.ip_info{
+color: white;
+background-color:  #2C2C2C;
+position: relative;
+bottom:750px;
+margin-right: 80%;
+margin-left: 0.5%;
+width: auto;
+}
+.dns{
+  color: white;
+  background-color:  #2C2C2C;
+  margin-left: 78%;
+  padding: 4px;
+  position: relative;
+  bottom:630px;
+  
+}
+#isp_dns{
+  margin-left: 78%;
+  color: white;
+  position: relative;
+  right: 286px;
+  bottom: 4px;
+}
+
+.wifi_oth{
+  color: white;
+  background-color:  #2C2C2C;
+  width: 380px;
+  height: 380px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align:justify;
+  padding-top: 30px;
+  margin-left: 78%;
+  position: relative;
+  bottom: 948px;
+  padding: 4px;
+}
+#oth_wifi{
+  color: white;
+  margin-left: 80%;
+  position: relative;
+  bottom: 955px;
+  right: 33px;
+
+}
+#profiles{
+  color: white;
+  background-color: red;
+  height: auto;
+  width: 380px;
+} 
+
+
+

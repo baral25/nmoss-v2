@@ -1,0 +1,158 @@
+
+var openFile = function(event){
+  // let tcp = document.querySelector("tcp")
+ 
+  var input = event.target;
+  var reader = new FileReader();
+  // var extract = deviceArray;
+  reader.onload = function(){
+    var text = reader.result;
+   
+    let newTxt = text.split("[+]");
+    
+     
+     
+     let deviceArray = [];
+ 
+     for (let index = 1; index < newTxt.length-1; index++) {
+       deviceArray.push(newTxt[index]);
+       
+     }
+     deviceArray.push(newTxt[newTxt.length -1].split("TCP")[0])
+    
+
+    const anotherArray = deviceArray.map(item =>{
+     let newItem = item.split('Device vendor for').join("").split('with MAC ADD').join("").split("is:").join("");
+     let newArray = newItem.split("  ");
+     console.log(newArray);
+     let obj = {};
+     obj['ip'] = newArray[1];
+     obj['mac'] = newArray[3];
+     obj['vendor'] = newArray[5];
+    return obj;
+    })
+    let node = document.getElementById('tcp');
+    
+    anotherArray.forEach(list =>{
+      node.insertAdjacentHTML('afterend', `<div id="vendor">Vendor: ${list.vendor}</div><div id="ip">IP: ${list.ip} </div> <div id="mac"> Mac: ${list.mac}</div>`);
+    })
+
+    // var match_text = deviceArray.toString();
+    // // var value_match = match_text.match(/for(\d+)/i)[1];
+    // var extracted = match_text.split("=").find(function(v){ 
+    //   return v.indexOf(" ") > -1;
+    // });
+    // //  var extract_v = str.match(\for (\d+)/i)[1]);
+    
+     ///////////
+    let html_array=[];
+    html_array = text.slice(text.indexOf("TCP"),text.lastIndexOf("TCP"));
+    
+    // slice_test = html_array;
+    let obj2 = {};
+    
+    console.log(html_array);
+    obj2['tcp'] = html_array[0];
+    obj2['add'] = html_array[2];
+    obj2['hostname'] = html_array[6];
+    obj2['status'] = html_array[7];
+    obj2['pid'] = html_array[9];
+    
+    // console.log(newTxt_2);
+    // console.log(test);
+    // console.log(slice_test);
+    let node_1 = document.getElementById('output');
+    html_array.forEach(list2 =>{
+      node_1.insertAdjacentHTML('afterend',`<div id="tcp" PROTOCOLS ${list2.tcp} </div><div id="add" PROTOCOLS ${list2.add} </div><div id="status" PROTOCOLS ${list2.status} </div><div id="pid" PROTOCOLS ${list2.pid} </div>`)
+    })
+      
+    // let netstatArray = [];
+    //  for (let index = 1; index < newTxt_2.length-1; index++) {
+    //    netstatArray.push(newTxt_2[index]);
+    //  }//.split("Description")[0])
+    //  netstatArray.push(newTxt_2[newTxt_2.length -1].split("Description")[0])
+
+    //  ///////////
+
+    // let newTxt_3 = text.split("Description")
+    // let wifiArray = [];
+    //  for (let index = 1; index < newTxt_3.length-1; index++){
+    //    wifiArray.push(newTxt_3[index]);
+    //  }
+    //  wifiArray.push(newTxt_3[newTxt_3.length-1].split("Interface")[0])
+    //  console.log(wifiArray)
+    //  ///////////
+
+    // let newTxt_4 = text.split("Interface")
+    // let ipArray = [];
+    //  for (let index = 1; index < newTxt_4.length-1; index++){
+    //    ipArray.push(newTxt_4[index]);
+    //  }
+    //  ipArray.push(newTxt_4[newTxt_4.length-1].split("All")[0])
+    //  console.log(ipArray)
+    // let newArray = newTxt.map(text =>{
+    //   let newText = text.split(",")[1];
+    //   let nwestText = newText.split(`"`).join("");
+    //   nwestText = nwestText.split("[").join("");
+    //   nwestText = nwestText.split(`'`).join("");
+    //   return nwestText;
+    // })
+    // console.log(newArray);
+    // newArray.forEach(item =>{
+    //   if(item.split(" ").includes("TCP")){
+    // tcp.append(`<p>${item}</p>`)}
+    // })
+    
+
+    
+
+    
+   
+
+    
+    let node_2 = document.getElementById('wifi').innerHTML = [wifiArray];
+    let node_3 = document.getElementById('ipAdd').innerHTML = [ipArray];
+    
+    //node.innerText = text;
+    // var last = text[reader.result.length-1];//this is array
+    
+    
+    
+  };
+ 
+  reader.readAsText(input.files[0]);
+  
+};
+
+###################################################
+var userImageLink = 
+"download_test.jpeg";
+            var time_start end_time;
+            
+            // The size in bytes
+            var image_size = 2281472;
+            var downloadImgSrc = new Image();
+  
+            downloadImgSrc.onload = function () {
+                end_time = new Date().getTime();
+                displaySpeed();
+            };
+            time_start = new Date().getTime();
+            downloadImgSrc.src = userImageLink;
+            document.write("time start: " + time_start);
+            document.write("<br>");
+  
+            function displaySpeed() {
+                var timeDuration = (end_time - time_start) / 1000;
+                var loadedBits = downloadSize * 8;
+                
+                /* Converts a number into string
+                   using toFixed(2) rounding to 2 */
+                var bps = (loadedBits / timeDuration).toFixed(2);
+                var speedInKbps = (bps / 1024).toFixed(2);
+                var speedInMbps = (speedInKbps / 1024).toFixed(2);
+                alert("Your internet connection speed is: \n" 
+                      + bps + " bps\n" + speedInKbps 
+                      + " kbps\n" + speedInMbps + " Mbps\n");
+            }
+
